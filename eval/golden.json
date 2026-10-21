@@ -1,74 +1,1208 @@
 [
-  {
+{
     "id": 1,
-    "question": "What does information mean, and how is it obtained from data?",
-    "expected_answer": "Information is data that has been processed and arranged to provide meaning and context. It is obtained by examining and interpreting data, helping people make decisions.",
-    "source_file": "001.pdf",
+    "question": "What kind of material is called data before it has been processed?",
+    "expected_answer": "Data consists of unprocessed facts such as observations, numbers, symbols, and descriptions that have no specific meaning on their own. Computers measure data using bits and bytes.",
+    "source_file": "dbms-notes.pdf",
     "page": 1,
     "type": "definition",
     "answerable": true
   },
   {
     "id": 2,
-    "question": "What do we call the complete collection of information present in a database at a particular time?",
-    "expected_answer": "It is called a database instance, representing the information stored in the database at that moment.",
-    "source_file": "001.pdf",
-    "page": 3,
-    "type": "definition",
+    "question": "How are numerical data and descriptive data distinguished, and what are examples of each?",
+    "expected_answer": "Quantitative data is expressed numerically, such as an item's weight, volume, or price. Qualitative data describes characteristics, such as a person's name, gender, or hair color.",
+    "source_file": "dbms-notes.pdf",
+    "page": 1,
+    "type": "comparison",
     "answerable": true
   },
   {
     "id": 3,
-    "question": "In an ER model, what is a group of similar entities sharing common properties known as?",
-    "expected_answer": "It is called an entity set. It contains entities belonging to the same type and having the same properties or attributes.",
-    "source_file": "001.pdf",
-    "page": 6,
-    "type": "definition",
+    "question": "How does information emerge from raw facts, and why is it useful?",
+    "expected_answer": "Information is produced by analyzing and interpreting data so that it becomes organized and meaningful. It adds context and helps people make decisions.",
+    "source_file": "dbms-notes.pdf",
+    "page": 1,
+    "type": "procedure",
     "answerable": true
   },
   {
     "id": 4,
-    "question": "How do data and information differ in terms of meaning and their usefulness when making decisions?",
-    "expected_answer": "Data consists of unorganized facts that may not have meaning on their own, whereas information is organized and interpreted data that provides context. Data alone is insufficient for decision-making, while information can support decisions.",
-    "source_file": "001.pdf",
+    "question": "What is the difference between a database and the software used to manage it?",
+    "expected_answer": "A database is an electronic system for storing information so it can be accessed, maintained, and changed. A DBMS combines the database with software that supports operations such as inserting, retrieving, modifying, and removing records.",
+    "source_file": "dbms-notes.pdf",
     "page": 1,
     "type": "comparison",
     "answerable": true
   },
   {
     "id": 5,
-    "question": "What is the difference between the physical and logical levels of database abstraction?",
-    "expected_answer": "The physical level explains how information is stored, including the underlying storage structures. The logical level describes what information the database contains and the relationships among it, without requiring users to understand the physical storage details.",
-    "source_file": "001.pdf",
-    "page": 3,
+    "question": "Why can a traditional file-processing approach create problems when storing and sharing data?",
+    "expected_answer": "File-based systems can experience duplicated or inconsistent information, difficult data access, isolation, integrity and atomicity problems, concurrency anomalies, and security issues. These are reasons to use a DBMS.",
+    "source_file": "dbms-notes.pdf",
+    "page": 2,
     "type": "comparison",
     "answerable": true
   },
   {
     "id": 6,
-    "question": "Why is a three-tier database application considered more secure than a setup where the client communicates with the database directly?",
-    "expected_answer": "In a three-tier architecture, the application server sits between the client and the database, preventing clients from accessing the database directly. This middle layer makes the system more secure.",
-    "source_file": "001.pdf",
-    "page": 5,
+    "question": "Why does database architecture provide users with different levels of abstraction?",
+    "expected_answer": "Abstraction hides selected implementation details so users can work with data more easily. The three-level approach allows different users to access personalized views while the underlying data is stored only once.",
+    "source_file": "dbms-notes.pdf",
+    "page": 3,
     "type": "comparison",
     "answerable": true
   },
   {
     "id": 7,
-    "question": "How can a C/C++ or Java application communicate with a database and obtain the results of its commands?",
-    "expected_answer": "The application uses an API to send DDL or DML statements to the database and receive the results. ODBC is associated with C, while JDBC is used with Java.",
-    "source_file": "001.pdf",
+    "question": "Which database layer deals with storage structures and the physical placement of information?",
+    "expected_answer": "The physical or internal level describes how data is stored using low-level structures. It considers matters such as storage allocation, compression, encryption, and efficient data access.",
+    "source_file": "dbms-notes.pdf",
+    "page": 3,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 8,
+    "question": "How do the conceptual level and external level differ in what they show?",
+    "expected_answer": "The conceptual level describes what information the database contains and how the information is related. The external level provides specific views for user groups and hides portions they do not need to see.",
+    "source_file": "dbms-notes.pdf",
+    "page": 3,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 9,
+    "question": "What term describes the data currently stored in a database at a particular moment?",
+    "expected_answer": "It is called a database instance. It represents the collection of information present in the database at that moment.",
+    "source_file": "dbms-notes.pdf",
+    "page": 3,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 10,
+    "question": "How does a database schema differ from the current database contents?",
+    "expected_answer": "The schema describes the database's structure and overall design, whereas the instance represents the information stored at a particular time. The schema normally changes less often than the data.",
+    "source_file": "dbms-notes.pdf",
+    "page": 4,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 11,
+    "question": "What is meant by physical data independence?",
+    "expected_answer": "Physical data independence means a change to the physical schema should not require changes to the logical schema or application programs.",
+    "source_file": "dbms-notes.pdf",
+    "page": 4,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 12,
+    "question": "How do DDL and DML differ in their responsibilities?",
+    "expected_answer": "DDL defines the database structure, whereas DML expresses queries and changes to database contents. DML supports retrieval, insertion, deletion, and updating of information.",
+    "source_file": "dbms-notes.pdf",
+    "page": 4,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 13,
+    "question": "What duties may be assigned to a database administrator?",
+    "expected_answer": "A DBA manages schema definition, storage structures, access methods, authorization, and changes to database organization. Routine responsibilities include backups, security patches, and upgrades.",
+    "source_file": "dbms-notes.pdf",
+    "page": 4,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 14,
+    "question": "How can an application written in Java or C communicate with a database?",
+    "expected_answer": "An application can use an API to send DDL or DML statements to the database and receive results. The notes associate JDBC with Java and ODBC with C.",
+    "source_file": "dbms-notes.pdf",
     "page": 4,
     "type": "procedure",
     "answerable": true
   },
   {
-    "id": 8,
-    "question": "How can a database designer merge entity types with shared properties to reduce repeated attributes?",
-    "expected_answer": "The designer identifies overlapping properties among entity types and creates a generalized entity set as their superclass. For example, Car, Jeep, and Bus can be generalized into Vehicle so their common attributes do not need to be repeated.",
-    "source_file": "001.pdf",
+    "id": 15,
+    "question": "How is a one-tier database application arranged?",
+    "expected_answer": "In a one-tier architecture, the client, application server functionality, and database are all present on the same machine.",
+    "source_file": "dbms-notes.pdf",
+    "page": 4,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 16,
+    "question": "What separates a two-tier architecture from a three-tier architecture?",
+    "expected_answer": "In a two-tier arrangement, the client invokes database functionality on the server through query statements and interfaces such as ODBC or JDBC. In a three-tier arrangement, the client communicates with an application server, which then accesses the database.",
+    "source_file": "dbms-notes.pdf",
+    "page": 5,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 17,
+    "question": "Why can a three-tier design improve security and support growth?",
+    "expected_answer": "The application server prevents the client from accessing the database directly and acts as an intermediate layer that reduces opportunities for data corruption. Distributed application servers can also improve scalability.",
+    "source_file": "dbms-notes.pdf",
+    "page": 5,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 18,
+    "question": "What does an entity-relationship model represent?",
+    "expected_answer": "An ER model represents real-world objects as entities and captures the relationships between those objects. Its diagram serves as a blueprint for designing a database.",
+    "source_file": "dbms-notes.pdf",
+    "page": 6,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 19,
+    "question": "How can you distinguish an independently identifiable entity from a dependent one?",
+    "expected_answer": "A strong entity can be uniquely identified using its own identifying attributes. A weak entity lacks sufficient attributes for unique identification and depends on a strong entity for its existence.",
+    "source_file": "dbms-notes.pdf",
+    "page": 6,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 20,
+    "question": "What is an entity set, and what does an attribute's domain represent?",
+    "expected_answer": "An entity set groups entities of the same type that share properties or attributes. A domain is the collection of permitted values for a particular attribute.",
+    "source_file": "dbms-notes.pdf",
+    "page": 6,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 21,
+    "question": "How do simple and composite attributes differ?",
+    "expected_answer": "A simple attribute cannot be divided into smaller attributes, such as a roll number. A composite attribute can be broken into components, such as a person's name into first, middle, and last names.",
+    "source_file": "dbms-notes.pdf",
+    "page": 6,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 22,
+    "question": "How are single-valued, multivalued, and derived attributes distinguished?",
+    "expected_answer": "A single-valued attribute holds one value, while a multivalued attribute can hold several values. A derived attribute obtains its value from other related attributes.",
+    "source_file": "dbms-notes.pdf",
+    "page": 6,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 23,
+    "question": "What different situations can a NULL attribute value represent?",
+    "expected_answer": "NULL may mean an attribute is not applicable, such as a missing middle name, or that its value is unknown. An unknown value can indicate either a missing entry or information that has not yet been established.",
+    "source_file": "dbms-notes.pdf",
+    "page": 7,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 24,
+    "question": "What does the degree of a relationship measure, and how are unary, binary, and ternary forms distinguished?",
+    "expected_answer": "The degree counts the entities participating in a relationship. Unary relationships involve one entity, binary relationships involve two, and ternary relationships involve three.",
+    "source_file": "dbms-notes.pdf",
+    "page": 7,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 25,
+    "question": "How can one-to-one, one-to-many, and many-to-many relationships be distinguished?",
+    "expected_answer": "In a one-to-one relationship, each side is associated with at most one entity on the other side. In one-to-many, one entity can correspond to several on the other side, whereas in many-to-many, entities on both sides can correspond to several entities on the opposite side.",
+    "source_file": "dbms-notes.pdf",
+    "page": 7,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 26,
+    "question": "How does total participation differ from partial participation in an ER relationship?",
+    "expected_answer": "Total participation requires every entity to take part in at least one relationship instance. Partial participation allows some entities to have no participation in that relationship.",
+    "source_file": "dbms-notes.pdf",
+    "page": 7,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 27,
+    "question": "How does specialization organize an entity set, and why might a designer use it?",
+    "expected_answer": "Specialization divides an entity set into more specific groups based on their characteristics, following a top-down approach. It helps represent attributes that apply only to some members and highlights distinctions between subgroups.",
+    "source_file": "dbms-notes.pdf",
     "page": 9,
     "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 28,
+    "question": "How does generalization differ from specialization?",
+    "expected_answer": "Generalization combines entity types with shared properties into a broader superclass and follows a bottom-up approach. Specialization starts with a more general entity set and divides it into more specific subgroups.",
+    "source_file": "dbms-notes.pdf",
+    "page": 9,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 29,
+    "question": "What happens to attributes when entity types are organized through inheritance?",
+    "expected_answer": "Lower-level entity sets inherit attributes from higher-level entity sets. For example, Customer and Employee can inherit attributes belonging to Person.",
+    "source_file": "dbms-notes.pdf",
+    "page": 9,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 30,
+    "question": "How can aggregation represent a relationship that participates in another relationship?",
+    "expected_answer": "Aggregation treats a relationship as a higher-level abstract entity so it can participate in another relationship. It can also help avoid redundancy by representing the aggregated relationship as an entity set.",
+    "source_file": "dbms-notes.pdf",
+    "page": 9,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 31,
+    "question": "What do rows, columns, degree, and cardinality represent in a relational database?",
+    "expected_answer": "A row is a tuple representing one record, and columns represent attributes of the relation. Degree is the number of columns, while cardinality is the total number of tuples.",
+    "source_file": "dbms-notes.pdf",
+    "page": 10,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 32,
+    "question": "What structural rules should a relational table follow according to the notes?",
+    "expected_answer": "Each relation must have a distinct name, each attribute name must be unique, values must be atomic, and tuples must be unique. Row and column ordering has no significance, and integrity constraints must be respected.",
+    "source_file": "dbms-notes.pdf",
+    "page": 10,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 33,
+    "question": "How do super keys, candidate keys, primary keys, and alternate keys relate to one another?",
+    "expected_answer": "A super key uniquely identifies tuples, while a candidate key is a minimal super key without redundant attributes and cannot have a NULL value. One candidate key is chosen as the primary key, and the remaining candidate keys are alternate keys.",
+    "source_file": "dbms-notes.pdf",
+    "page": 10,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 34,
+    "question": "What are composite, compound, and surrogate keys?",
+    "expected_answer": "A composite key uses at least two attributes, while a compound key is formed from two foreign keys. A surrogate key is a synthetic identifier generally generated automatically by the DBMS, often as an integer.",
+    "source_file": "dbms-notes.pdf",
+    "page": 10,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 35,
+    "question": "How does a referential constraint keep two related relations consistent?",
+    "expected_answer": "It requires values in the specified attributes of a referencing relation to appear in the corresponding attributes of the referenced relation. When a foreign key references a primary key, each foreign-key value must match a parent value or be NULL.",
+    "source_file": "dbms-notes.pdf",
+    "page": 11,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 36,
+    "question": "How do NOT NULL, UNIQUE, DEFAULT, and CHECK constraints differ?",
+    "expected_answer": "NOT NULL requires a value, UNIQUE prevents repeated values in a column, DEFAULT supplies a value when none is provided, and CHECK tests a specified condition on the data. These constraints help control which values can be stored.",
+    "source_file": "dbms-notes.pdf",
+    "page": 11,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 37,
+    "question": "What do entity constraints require of a relation's primary key?",
+    "expected_answer": "Every relation should have a primary key, and that key cannot contain NULL values. The primary key serves as an identifier for each entity or tuple.",
+    "source_file": "dbms-notes.pdf",
+    "page": 10,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 38,
+    "question": "How is a strong entity represented when converting an ER design into relational tables?",
+    "expected_answer": "Create a separate table named for the entity and map its attributes to columns. Use the entity's primary key as the table's primary key and add foreign keys where needed to represent relationships.",
+    "source_file": "dbms-notes.pdf",
+    "page": 12,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 39,
+    "question": "How is a weak entity converted into a relational table?",
+    "expected_answer": "Create a table containing the weak entity's attributes and add the primary key of its owning strong entity as a foreign key. Form the new table's composite primary key from that foreign key and the weak entity's partial discriminator key.",
+    "source_file": "dbms-notes.pdf",
+    "page": 12,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 40,
+    "question": "How should composite, multivalued, and derived attributes be handled during ER-to-relational conversion?",
+    "expected_answer": "Replace a composite attribute with separate columns for its components, and create a separate table for each multivalued attribute using the original entity key as a foreign key. Derived attributes are not included in the tables according to the notes.",
+    "source_file": "dbms-notes.pdf",
+    "page": 12,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 41,
+    "question": "Under what condition can generalized entity tables be omitted when converting an ER model to relations?",
+    "expected_answer": "The alternative method is available when the generalization is both disjoint and complete. Each higher-level entity must belong to one of the lower-level sets, and no entity may belong to two of those lower-level sets.",
+    "source_file": "dbms-notes.pdf",
+    "page": 12,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 42,
+    "question": "Which columns should be represented in a relational table created for an aggregated relationship?",
+    "expected_answer": "The table includes the primary keys of the participating entity sets and entities belonging to the aggregation. Any descriptive attribute belonging to the relationship should also be included.",
+    "source_file": "dbms-notes.pdf",
+    "page": 13,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 43,
+    "question": "What does SQL allow users to do with a relational database?",
+    "expected_answer": "SQL is a query language for accessing and manipulating data. Its CRUD operations cover creating records, reading stored information, updating existing values, and deleting records.",
+    "source_file": "dbms-notes.pdf",
+    "page": 14,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 44,
+    "question": "How are SQL and a relational database management system different?",
+    "expected_answer": "SQL is the language used to issue database operations, whereas an RDBMS is the software that implements and manages a relational database. MySQL is an example of an open-source RDBMS that uses SQL.",
+    "source_file": "dbms-notes.pdf",
+    "page": 14,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 45,
+    "question": "How does MySQL use the client-server model?",
+    "expected_answer": "The client can be a command-line interface or a frontend application that requests services from the MySQL server. The server provides the database functionality requested by the client.",
+    "source_file": "dbms-notes.pdf",
+    "page": 14,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 46,
+    "question": "How do CHAR and VARCHAR differ in the way they represent strings?",
+    "expected_answer": "The notes list both CHAR and VARCHAR as string data types, with a length range shown for each. VARCHAR is identified as variable-length and is recommended when storing values of differing lengths because it can occupy space based on actual data size.",
+    "source_file": "dbms-notes.pdf",
+    "page": 15,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 47,
+    "question": "Which MySQL types can represent dates and times, and what formats do the notes associate with them?",
+    "expected_answer": "DATE uses the YYYY-MM-DD format, DATETIME uses YYYY-MM-DD HH:MM:SS, TIMESTAMP uses YYYYMMDDHHMMSS, and TIME uses HH:MM:SS. ENUM represents one predefined value, while SET can represent one or more predefined values.",
+    "source_file": "dbms-notes.pdf",
+    "page": 15,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 48,
+    "question": "How do DDL, DQL, DML, DCL, and TCL differ in the SQL command classification?",
+    "expected_answer": "DDL defines database structures, DQL retrieves data, and DML changes stored data. DCL manages user permissions, while TCL controls transactions through actions such as starting, committing, rolling back, or creating savepoints.",
+    "source_file": "dbms-notes.pdf",
+    "page": 15,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 49,
+    "question": "How can a user select a database and inspect available databases and tables in MySQL?",
+    "expected_answer": "Use `USE db-name;` to select the database, `SHOW DATABASES;` to list the server's databases, and `SHOW TABLES;` to list tables in the selected database. The notes also show `CREATE DATABASE IF NOT EXISTS` and `DROP DATABASE IF EXISTS` for database creation and removal.",
+    "source_file": "dbms-notes.pdf",
+    "page": 15,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 50,
+    "question": "How can a SELECT statement return a calculation without referencing a user-created table?",
+    "expected_answer": "The notes describe using MySQL's DUAL dummy-table concept for operations that do not require user-defined tables. For example, a calculation can be requested with `SELECT 55 + 11;`.",
+    "source_file": "dbms-notes.pdf",
+    "page": 16,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 51,
+    "question": "How do WHERE, BETWEEN, IN, and IS NULL help narrow the rows returned by a query?",
+    "expected_answer": "WHERE applies a condition to filter rows, BETWEEN checks whether a value lies within a range including its endpoints in the example, and IN checks whether a value belongs to a supplied list. IS NULL selects rows whose specified attribute has a NULL value.",
+    "source_file": "dbms-notes.pdf",
+    "page": 16,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 52,
+    "question": "What do the percent and underscore symbols mean when used for SQL pattern matching?",
+    "expected_answer": "The percent symbol matches any number of characters, including none. The underscore symbol matches exactly one character.",
+    "source_file": "dbms-notes.pdf",
+    "page": 16,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 53,
+    "question": "How can query results be arranged in ascending or descending order?",
+    "expected_answer": "Use ORDER BY followed by the column name used for sorting. ASC requests ascending order, while DESC requests descending order.",
+    "source_file": "dbms-notes.pdf",
+    "page": 16,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 54,
+    "question": "How does GROUP BY support calculations over categories of records?",
+    "expected_answer": "GROUP BY collects rows into groups based on one or more columns. It can be combined with functions such as COUNT, SUM, AVG, MIN, and MAX to calculate values for those groups.",
+    "source_file": "dbms-notes.pdf",
+    "page": 16,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 55,
+    "question": "How can a query return only distinct values from a column?",
+    "expected_answer": "Use `SELECT DISTINCT(col_name) FROM table_name;` to retrieve distinct values. The notes also show grouping by that column as a way to obtain the same result.",
+    "source_file": "dbms-notes.pdf",
+    "page": 16,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 56,
+    "question": "How does HAVING differ from WHERE when filtering SQL query results?",
+    "expected_answer": "WHERE filters individual rows before grouping, whereas HAVING filters groups after GROUP BY has been applied. The notes state that GROUP BY is required when HAVING is used.",
+    "source_file": "dbms-notes.pdf",
+    "page": 17,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 57,
+    "question": "What requirements does a primary key have under the SQL constraints described in the notes?",
+    "expected_answer": "A primary key must contain unique, non-NULL values, and a table can have only one primary-key constraint. It identifies each record in the table.",
+    "source_file": "dbms-notes.pdf",
+    "page": 17,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 58,
+    "question": "How can a table enforce a rule such as requiring a customer's age to exceed a specified value?",
+    "expected_answer": "Use a CHECK constraint with the required condition in the table definition. The notes illustrate this approach with a named constraint that checks whether age is greater than 12.",
+    "source_file": "dbms-notes.pdf",
+    "page": 17,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 59,
+    "question": "How do UNIQUE and FOREIGN KEY constraints differ in their purposes?",
+    "expected_answer": "UNIQUE prevents duplicate values in a constrained column, and the notes state that such a column can allow NULL. A foreign key links one table to the primary key of another table.",
+    "source_file": "dbms-notes.pdf",
+    "page": 17,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 60,
+    "question": "How can a database column receive an automatic value when an INSERT statement does not supply one?",
+    "expected_answer": "Declare the column with the DEFAULT keyword followed by the intended value. The notes demonstrate this with a saving-rate column whose default is 4.25.",
+    "source_file": "dbms-notes.pdf",
+    "page": 18,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 61,
+    "question": "How can a user add a new attribute to an existing table or change the attribute's data type?",
+    "expected_answer": "Use ALTER TABLE with ADD to introduce a column. Use MODIFY to change an existing column's data type, as shown by changing a name column from VARCHAR to CHAR.",
+    "source_file": "dbms-notes.pdf",
+    "page": 18,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 62,
+    "question": "What operations can ALTER TABLE perform besides adding a column?",
+    "expected_answer": "The notes describe changing a column name and its type with CHANGE COLUMN, removing an attribute with DROP COLUMN, and renaming a table with RENAME TO.",
+    "source_file": "dbms-notes.pdf",
+    "page": 18,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 63,
+    "question": "How does ON UPDATE CASCADE maintain the connection between related tables when a referenced key changes?",
+    "expected_answer": "If the primary key in the parent table is updated, ON UPDATE CASCADE automatically updates the corresponding foreign-key values in the referencing table. This maintains the relationship between the records.",
+    "source_file": "dbms-notes.pdf",
+    "page": 18,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 64,
+    "question": "How can foreign-key actions respond when a referenced parent record is removed?",
+    "expected_answer": "ON DELETE CASCADE can remove the related child records, while ON DELETE SET NULL sets their foreign-key values to NULL. The notes illustrate both options in table definitions.",
+    "source_file": "dbms-notes.pdf",
+    "page": 19,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 65,
+    "question": "What does the REPLACE statement do when the supplied record already exists or does not exist?",
+    "expected_answer": "According to the notes, REPLACE can replace an existing row identified through its primary key. If there is no duplicate data, it can insert a new tuple.",
+    "source_file": "dbms-notes.pdf",
+    "page": 19,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 66,
+    "question": "How do INNER JOIN, LEFT JOIN, and RIGHT JOIN differ in the rows they preserve?",
+    "expected_answer": "INNER JOIN returns matching rows from the joined tables. LEFT JOIN retains all rows from the left table alongside matching right-side data, while RIGHT JOIN retains all rows from the right table alongside matching left-side data.",
+    "source_file": "dbms-notes.pdf",
+    "page": 19,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 67,
+    "question": "How can a full join be represented in MySQL according to the notes?",
+    "expected_answer": "The notes show emulating a full join by combining a LEFT JOIN result and a RIGHT JOIN result with UNION. UNION returns unique rows, whereas UNION ALL can retain duplicates.",
+    "source_file": "dbms-notes.pdf",
+    "page": 19,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 68,
+    "question": "What result is produced when two tables are combined with CROSS JOIN?",
+    "expected_answer": "CROSS JOIN produces the Cartesian product of the two tables, containing every possible combination of their rows. For example, tables containing 10 and 5 rows produce 50 combined rows.",
+    "source_file": "dbms-notes.pdf",
+    "page": 19,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 69,
+    "question": "How can one table be joined to itself, and what is this technique useful for?",
+    "expected_answer": "A self join uses the same table twice in a query, usually assigning different aliases to its two references. The notes show this being implemented with INNER JOIN.",
+    "source_file": "dbms-notes.pdf",
+    "page": 20,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 70,
+    "question": "How do joins differ from SQL set operations in the way they combine results?",
+    "expected_answer": "Joins combine data across columns based on relationships or matching conditions, while set operations combine the rows returned by multiple SELECT statements. The notes state that corresponding result columns for set operations must have compatible data types and the same number of columns.",
+    "source_file": "dbms-notes.pdf",
+    "page": 20,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 71,
+    "question": "How do UNION, INTERSECT, and MINUS differ in their intended results?",
+    "expected_answer": "UNION combines query results, INTERSECT returns values common to both results, and MINUS returns distinct rows from the first result that do not appear in the second. The notes describe INTERSECT and MINUS as operators that can be emulated.",
+    "source_file": "dbms-notes.pdf",
+    "page": 20,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 72,
+    "question": "What is a subquery, and where can it appear in a SQL statement?",
+    "expected_answer": "A subquery is a nested SELECT statement that provides a result for an outer query and can act as an alternative to joins. The notes show subqueries within WHERE, FROM, and SELECT clauses.",
+    "source_file": "dbms-notes.pdf",
+    "page": 20,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 73,
+    "question": "What is the difference between a regular nested subquery and a correlated one?",
+    "expected_answer": "A regular nested query runs once to produce values for the outer query. A correlated subquery executes separately for each candidate row considered by its outer query.",
+    "source_file": "dbms-notes.pdf",
+    "page": 21,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 74,
+    "question": "Why might a subquery be easier to understand than a join, and what trade-off do the notes identify?",
+    "expected_answer": "The notes describe subqueries as comparatively easier to understand and implement, while joins may be harder to design optimally. They also characterize joins as faster and subqueries as slower.",
+    "source_file": "dbms-notes.pdf",
+    "page": 21,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 75,
+    "question": "What is a database view, and how does it respond to changes in underlying tables?",
+    "expected_answer": "A view is a virtual table defined by a query over one or more tables and does not hold its own data. Changes to the underlying tables are reflected in the view.",
+    "source_file": "dbms-notes.pdf",
+    "page": 21,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 76,
+    "question": "How can a MySQL view be created, modified, or removed?",
+    "expected_answer": "Use CREATE VIEW with a SELECT query to define the view, ALTER VIEW to change its definition, and DROP VIEW IF EXISTS to remove it. A view can also be defined using data from joined tables.",
+    "source_file": "dbms-notes.pdf",
+    "page": 21,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 77,
+    "question": "In a functional dependency X → Y, which side determines the other?",
+    "expected_answer": "X is called the determinant and Y is called the dependent. The dependency expresses that X determines Y.",
+    "source_file": "dbms-notes.pdf",
+    "page": 22,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 78,
+    "question": "How do trivial and non-trivial functional dependencies differ?",
+    "expected_answer": "A functional dependency is trivial when the attributes on the right side form a subset of those on the left side. It is non-trivial when the right-side attributes are not a subset of the left-side attributes.",
+    "source_file": "dbms-notes.pdf",
+    "page": 22,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 79,
+    "question": "How can Armstrong's three stated rules be used to infer functional dependencies?",
+    "expected_answer": "Reflexivity permits A → B when B is contained in A; augmentation permits AX → BX when A → B holds; and transitivity permits A → C when A → B and B → C hold.",
+    "source_file": "dbms-notes.pdf",
+    "page": 22,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 80,
+    "question": "How can redundant storage cause insertion, deletion, and update anomalies?",
+    "expected_answer": "An insertion anomaly prevents some information from being added without other information, a deletion anomaly causes unintended loss of additional information, and an update anomaly requires one value to be changed in multiple rows. Missing one of those changes can make the data inconsistent.",
+    "source_file": "dbms-notes.pdf",
+    "page": 22,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 81,
+    "question": "How does normalization improve database organization, and what is required by first normal form?",
+    "expected_answer": "Normalization reduces redundant data and helps prevent insertion, deletion, and update anomalies by dividing larger tables into smaller related tables where appropriate. Under 1NF, every relation cell must hold an atomic value, and multivalued attributes must not occur.",
+    "source_file": "dbms-notes.pdf",
+    "page": 22,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 82,
+    "question": "What conditions must a relation satisfy to meet second and third normal forms?",
+    "expected_answer": "Second normal form requires 1NF and prohibits partial dependencies, so non-prime attributes must depend fully on the primary key. Third normal form requires 2NF and prohibits the transitive dependency described in the notes between non-prime attributes.",
+    "source_file": "dbms-notes.pdf",
+    "page": 23,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 83,
+    "question": "What additional requirement distinguishes BCNF in the notes?",
+    "expected_answer": "A relation must first satisfy 3NF. For every functional dependency A → B, A must be a super key.",
+    "source_file": "dbms-notes.pdf",
+    "page": 23,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 84,
+    "question": "How do transactions support reliable database changes, and what is a rollback?",
+    "expected_answer": "A transaction is a logical unit of work made up of one or more SQL statements executed in sequence. If it fails, rollback undoes its changes; if it succeeds, those changes become permanent.",
+    "source_file": "dbms-notes.pdf",
+    "page": 24,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 85,
+    "question": "How do atomicity and consistency protect database transactions?",
+    "expected_answer": "Atomicity requires either all transaction operations to take effect or none of them. Consistency requires integrity constraints to hold before and after a transaction.",
+    "source_file": "dbms-notes.pdf",
+    "page": 24,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 86,
+    "question": "What do isolation and durability guarantee when transactions execute?",
+    "expected_answer": "Isolation ensures that concurrent transactions do not interfere with one another in a way that violates the stated execution guarantee. Durability ensures that successful transaction changes remain stored even after a system failure.",
+    "source_file": "dbms-notes.pdf",
+    "page": 24,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 87,
+    "question": "What happens as a transaction moves from active to partially committed state?",
+    "expected_answer": "In the active state, the transaction performs its read and write operations. If execution finishes without errors, it enters the partially committed state, where its changes have been saved in the main-memory buffer.",
+    "source_file": "dbms-notes.pdf",
+    "page": 24,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 88,
+    "question": "What distinguishes committed, failed, aborted, and terminated transaction states?",
+    "expected_answer": "A committed transaction has made its changes permanent, while a failed transaction cannot continue because of an error. An aborted transaction has completed rollback, and a terminated transaction has either committed or aborted.",
+    "source_file": "dbms-notes.pdf",
+    "page": 25,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 89,
+    "question": "How does an aborted transaction restore the database to its prior condition?",
+    "expected_answer": "After a transaction fails, the changes in its buffer are reversed and rollback completes. The database then returns to the state that existed before that transaction.",
+    "source_file": "dbms-notes.pdf",
+    "page": 25,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 90,
+    "question": "Why does a database system use a recovery mechanism?",
+    "expected_answer": "The recovery component supports atomicity and durability. It helps ensure that transactions do not leave partial changes behind and that successful changes can persist through failures.",
+    "source_file": "dbms-notes.pdf",
+    "page": 26,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 91,
+    "question": "How does the shadow-copy approach apply database changes safely?",
+    "expected_answer": "The transaction creates a full copy of the database and applies its updates to that new copy while leaving the original unchanged. If the transaction is aborted, the new copy is deleted and the old copy remains available.",
+    "source_file": "dbms-notes.pdf",
+    "page": 26,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 92,
+    "question": "How does the database pointer determine which copy is recovered after a system failure?",
+    "expected_answer": "The pointer identifies the current database copy on disk. Before it is updated, recovery selects the original copy; after it is updated, recovery selects the new copy whose pages were already written to disk.",
+    "source_file": "dbms-notes.pdf",
+    "page": 26,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 93,
+    "question": "What makes log-based recovery useful when database operations fail?",
+    "expected_answer": "The system records transaction operations in a log kept in stable storage so that it can recover from failures. The log must be written before the corresponding database operation is applied.",
+    "source_file": "dbms-notes.pdf",
+    "page": 26,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 94,
+    "question": "How do deferred and immediate database modifications differ during transaction execution?",
+    "expected_answer": "Deferred modification records changes in the log and postpones database writes until the transaction's final action has executed. Immediate modification can write changes while the transaction remains active, relying on logged old and new values for recovery.",
+    "source_file": "dbms-notes.pdf",
+    "page": 26,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 95,
+    "question": "What are the purpose and main components of a database index?",
+    "expected_answer": "An index helps locate records while reducing disk accesses during query processing. Its search key identifies the indexed value, and its data reference points to the disk block where the corresponding record is stored.",
+    "source_file": "dbms-notes.pdf",
+    "page": 27,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 96,
+    "question": "How do primary and secondary indexes differ in their relationship with data-file ordering?",
+    "expected_answer": "A primary index uses a search key that defines the sequential order of an ordered data file. A secondary index is used when the data file is unsorted with respect to the indexed key and is described in the notes as a dense index.",
+    "source_file": "dbms-notes.pdf",
+    "page": 27,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 97,
+    "question": "How do dense and sparse indexes differ in the number of index records they contain?",
+    "expected_answer": "A dense index has an entry for every search-key value, while a sparse index includes only some search-key values. Because it stores more entries, a dense index requires more space for its index records.",
+    "source_file": "dbms-notes.pdf",
+    "page": 27,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 98,
+    "question": "How can primary indexing differ when its search key is a primary-key attribute versus a non-key attribute?",
+    "expected_answer": "When the file is ordered by the primary key, the primary key serves as the search key and the notes describe a sparse index with one entry per data block. When ordered by a non-key attribute, the index includes an entry for each unique non-key value, which the notes classify as dense.",
+    "source_file": "dbms-notes.pdf",
+    "page": 27,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 99,
+    "question": "When would a database index be divided into multiple levels?",
+    "expected_answer": "A multi-level index is used when a single-level index becomes large enough that searching it with binary search takes too much time. Dividing the index into levels can make searching more manageable.",
+    "source_file": "dbms-notes.pdf",
+    "page": 27,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 100,
+    "question": "What are the main benefits and costs of adding indexes to a database?",
+    "expected_answer": "Indexes can speed up data retrieval and reduce I/O. They also require extra storage and can reduce performance for INSERT, DELETE, and UPDATE queries.",
+    "source_file": "dbms-notes.pdf",
+    "page": 28,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 101,
+    "question": "What distinguishes NoSQL databases from traditional relational databases?",
+    "expected_answer": "NoSQL databases store data using models such as documents, key-value pairs, wide columns, or graphs rather than relying exclusively on relational tables. Their schemas are flexible, and many can scale horizontally to handle large amounts of data and high user loads.",
+    "source_file": "dbms-notes.pdf",
+    "page": 29,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 102,
+    "question": "Why did the popularity of NoSQL databases increase as application development needs changed?",
+    "expected_answer": "Storage became cheaper while data grew more unstructured, making fixed schemas and complex data models costly to maintain. NoSQL offered flexibility for rapidly changing requirements and support for distributing data across servers and regions.",
+    "source_file": "dbms-notes.pdf",
+    "page": 29,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 103,
+    "question": "How does flexible schema design help when a database's information requirements change frequently?",
+    "expected_answer": "A flexible schema reduces the need to make difficult structural changes whenever the data or application requirements change. This supports rapid development and is useful when not all the data is known in advance.",
+    "source_file": "dbms-notes.pdf",
+    "page": 29,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 104,
+    "question": "Why can NoSQL databases provide high availability and efficient reads in some applications?",
+    "expected_answer": "Replication can make data accessible from another server if one fails. Data stored together in a format optimized for common queries can also reduce the need for joins, potentially making reads faster.",
+    "source_file": "dbms-notes.pdf",
+    "page": 29,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 105,
+    "question": "How does a key-value store associate and retrieve information?",
+    "expected_answer": "It stores each data element as a key paired with a value, where the key identifies the value to retrieve. The notes describe its uses in shopping carts, user preferences, profiles, caching, sessions, and applications with simple key-based queries.",
+    "source_file": "dbms-notes.pdf",
+    "page": 30,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 106,
+    "question": "Why are column-oriented databases useful for analytical queries?",
+    "expected_answer": "Column stores keep values from the same column together, allowing queries to read selected columns without loading unnecessary data. Similar data types can also benefit from compression, making aggregation of column values efficient.",
+    "source_file": "dbms-notes.pdf",
+    "page": 30,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 107,
+    "question": "How does a document database represent a record, and what applications can use this model?",
+    "expected_answer": "It stores information in documents similar to JSON objects, containing fields and values that can include strings, numbers, booleans, arrays, or objects. The notes list e-commerce, trading platforms, and mobile applications as use cases.",
+    "source_file": "dbms-notes.pdf",
+    "page": 30,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 108,
+    "question": "How does a graph database represent relationships, and why can it reduce some query overhead?",
+    "expected_answer": "It stores entities as nodes and their connections as links or relationships. Because relationships are represented directly, graph queries can avoid some of the overhead associated with joining multiple relational tables.",
+    "source_file": "dbms-notes.pdf",
+    "page": 30,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 109,
+    "question": "What disadvantages should be considered when choosing a NoSQL data model?",
+    "expected_answer": "NoSQL may duplicate data, make updates and deletions costly, and fail to support every application requirement with a single model. The notes also identify limitations around ACID guarantees and consistency constraints, while noting that some systems such as MongoDB support ACID transactions.",
+    "source_file": "dbms-notes.pdf",
+    "page": 30,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 110,
+    "question": "How do SQL and NoSQL differ in schema flexibility, scaling, and the use of joins?",
+    "expected_answer": "SQL databases generally use fixed schemas, commonly scale vertically, and often require joins; NoSQL databases commonly use flexible schemas, scale horizontally, and often avoid joins. The notes also explain that support for ACID transactions varies among NoSQL systems.",
+    "source_file": "dbms-notes.pdf",
+    "page": 31,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 111,
+    "question": "How do relational databases organize information, and what limitations are mentioned in the notes?",
+    "expected_answer": "Relational databases organize structured information into tables and use SQL for operations such as creating, reading, updating, and deleting records, with foreign keys supporting joins between tables. The notes identify horizontal scaling and increasing complexity with very large datasets as challenges.",
+    "source_file": "dbms-notes.pdf",
+    "page": 32,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 112,
+    "question": "What distinguishes an object-oriented database from a relational database in how it represents information?",
+    "expected_answer": "An object-oriented database treats information as objects that can package related data together. Its model uses concepts such as inheritance, object identity, encapsulation, and methods, and the notes state that it can handle complex data relationships.",
+    "source_file": "dbms-notes.pdf",
+    "page": 32,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 113,
+    "question": "How does a hierarchical database organize parent and child records?",
+    "expected_answer": "It uses a tree-like structure with a root and successive child branches. A parent can have multiple children, but each child can have only one parent, and retrieving information involves traversing the tree from the root.",
+    "source_file": "dbms-notes.pdf",
+    "page": 32,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 114,
+    "question": "Why can hierarchical databases become unsuitable for complicated relationships?",
+    "expected_answer": "Their structure does not naturally support a child connected to multiple parents. Tree traversal can also require time-consuming top-to-bottom searching and redundant storage across separate entities.",
+    "source_file": "dbms-notes.pdf",
+    "page": 33,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 115,
+    "question": "How does a network database extend the hierarchical model?",
+    "expected_answer": "A network database allows child records to associate with multiple parent records and organizes the structure as a graph. The notes state that it can represent complex relationships, although maintenance can be difficult and many-to-many links may slow retrieval.",
+    "source_file": "dbms-notes.pdf",
+    "page": 33,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 116,
+    "question": "What is database clustering, and when might it be needed?",
+    "expected_answer": "Clustering combines multiple servers or instances that connect to a single database and replicate the same dataset. It may be needed when one server cannot manage the volume of data or number of incoming requests adequately.",
+    "source_file": "dbms-notes.pdf",
+    "page": 34,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 117,
+    "question": "How do redundancy, load balancing, and high availability benefit a clustered database?",
+    "expected_answer": "Replicas make data accessible from other servers when one fails, while load balancing distributes work so a single machine does not receive all requests. Together with additional machines, these features can improve capacity and database availability.",
+    "source_file": "dbms-notes.pdf",
+    "page": 34,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 118,
+    "question": "How do vertical and horizontal partitioning divide a database relation?",
+    "expected_answer": "Vertical partitioning splits a relation by columns, so multiple servers may need to be accessed to reconstruct complete tuples. Horizontal partitioning splits the relation by rows and places separate groups of tuples on different servers.",
+    "source_file": "dbms-notes.pdf",
+    "page": 35,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 119,
+    "question": "When might database partitioning be useful, and what benefits can it provide?",
+    "expected_answer": "Partitioning can help when a dataset becomes difficult to manage or a single database server makes request processing too slow. The notes list parallelism, availability, performance, easier management, and lower costs than some scale-up approaches as benefits.",
+    "source_file": "dbms-notes.pdf",
+    "page": 35,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 120,
+    "question": "How does sharding implement horizontal partitioning, and what challenges can it introduce?",
+    "expected_answer": "Sharding splits data across database instances and uses a routing layer to send each request to the instance holding the required data. It can improve scalability and availability but adds complexity around routing and partition mapping, possible re-sharding, and analytical queries that must gather data from several instances.",
+    "source_file": "dbms-notes.pdf",
+    "page": 35,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 121,
+    "question": "What database setup is described for the small cab-booking application before its growth?",
+    "expected_answer": "The example starts with a small startup serving around ten customers, using one modest machine to store customer, trip, location, booking, and trip-history data. Initially, it handles approximately one booking every five minutes.",
+    "source_file": "dbms-notes.pdf",
+    "page": 38,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 122,
+    "question": "What problems appear when the cab-booking application's request volume grows?",
+    "expected_answer": "The example describes the system reaching about 30 bookings per minute, after which database performance deteriorates and API latency rises. Transactions experience deadlocks, starvation, and frequent failures, harming the user experience.",
+    "source_file": "dbms-notes.pdf",
+    "page": 39,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 123,
+    "question": "What optimizations are proposed first for the growing cab-booking service?",
+    "expected_answer": "The first pattern recommends caching frequently accessed data that does not change often, such as booking history, payment history, and profiles. It also proposes database redundancy and connection-pooling libraries so application threads can reuse database connections.",
+    "source_file": "dbms-notes.pdf",
+    "page": 41,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 124,
+    "question": "How does vertical scaling improve the cab-booking application's database capacity, and what trade-off is noted?",
+    "expected_answer": "Vertical scaling upgrades the existing machine, for example by increasing RAM and SSD capacity. The notes describe it as useful up to a point, after which additional capacity becomes increasingly expensive.",
+    "source_file": "dbms-notes.pdf",
+    "page": 42,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 125,
+    "question": "How does CQRS divide read and write traffic in the scaling example?",
+    "expected_answer": "The pattern separates read and write operations across machines by directing read queries to replicas and write queries to the primary database. The notes warn that the primary can later become unable to handle all writes and replica lag can affect users.",
+    "source_file": "dbms-notes.pdf",
+    "page": 43,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 126,
+    "question": "What changes when a database moves from a single-primary arrangement to multi-primary replication?",
+    "expected_answer": "In a multi-primary configuration, all machines can act as primary and replica nodes in a logical ring. Writes can be sent to any node, and reads can use the node that responds first to the broadcast described in the notes.",
+    "source_file": "dbms-notes.pdf",
+    "page": 44,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 127,
+    "question": "How can a database be partitioned according to application functionality?",
+    "expected_answer": "Tables associated with different functions, such as location data, can be placed in separate database schemas or machines. The application or backend layer must then combine results from the different databases when required.",
+    "source_file": "dbms-notes.pdf",
+    "page": 45,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 128,
+    "question": "How does horizontal scaling distribute the database across multiple machines?",
+    "expected_answer": "Horizontal scaling adds multiple machines with the same database schema, with each machine holding only part of the data through sharding. The notes recommend maintaining data locality and explain that each machine can have replicas for recovery after failures.",
+    "source_file": "dbms-notes.pdf",
+    "page": 46,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 129,
+    "question": "Why might a distributed application use database partitions across geographically separate data centres?",
+    "expected_answer": "Requests travelling across continents can experience high latency, so distributing traffic among different data centres can reduce the impact of long-distance communication. Cross-data-centre replication also supports disaster recovery and availability.",
+    "source_file": "dbms-notes.pdf",
+    "page": 47,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 130,
+    "question": "What does consistency mean in the CAP theorem, and what does partition tolerance require?",
+    "expected_answer": "Consistency means nodes return the same, most recently written data to readers. Partition tolerance means the system continues operating despite dropped or delayed communication between nodes.",
+    "source_file": "dbms-notes.pdf",
+    "page": 48,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 131,
+    "question": "How does the CAP theorem describe the trade-off between consistency and availability?",
+    "expected_answer": "The theorem states that a distributed system cannot simultaneously provide consistency, availability, and partition tolerance in every situation. During a partition, the system faces a trade-off between consistency and availability.",
+    "source_file": "dbms-notes.pdf",
+    "page": 48,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 132,
+    "question": "How do CA, CP, and AP database choices differ during a network partition?",
+    "expected_answer": "CA aims for consistency and availability but does not provide partition tolerance; CP preserves consistency and partition tolerance while sacrificing availability; AP preserves availability and partition tolerance but may temporarily return stale data. The notes give MongoDB as an example of CP and Cassandra as an example of AP.",
+    "source_file": "dbms-notes.pdf",
+    "page": 48,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 133,
+    "question": "How does the master-slave pattern distribute database reads and writes?",
+    "expected_answer": "The master stores the authoritative, latest data and receives write operations, while read operations are handled by slave databases. Replication distributes the master's data to the slaves to help reduce load and latency.",
+    "source_file": "dbms-notes.pdf",
+    "page": 49,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 134,
+    "question": "What are the two replication timing approaches mentioned for synchronizing master and slave databases?",
+    "expected_answer": "The notes identify synchronous and asynchronous replication as two choices for distributing data from the master to slave machines. The appropriate choice depends on the system's needs.",
+    "source_file": "dbms-notes.pdf",
+    "page": 49,
+    "type": "comparison",
     "answerable": true
   }
 ]

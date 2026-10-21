@@ -89,6 +89,7 @@ CREATE TABLE chat_messages (
   subject_id INTEGER NOT NULL REFERENCES subjects(id) ON DELETE CASCADE,
   role TEXT NOT NULL CHECK (role IN ('user', 'assistant')),
   content TEXT NOT NULL,
+  sources JSONB,
   created_at TIMESTAMPTZ DEFAULT now()
 );
 
