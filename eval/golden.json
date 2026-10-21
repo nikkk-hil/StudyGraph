@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "question": "What does information mean, and how is it obtained from data?",
+    "expected_answer": "Information is data that has been processed and arranged to provide meaning and context. It is obtained by examining and interpreting data, helping people make decisions.",
+    "source_file": "001.pdf",
+    "page": 1,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 2,
+    "question": "What do we call the complete collection of information present in a database at a particular time?",
+    "expected_answer": "It is called a database instance, representing the information stored in the database at that moment.",
+    "source_file": "001.pdf",
+    "page": 3,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 3,
+    "question": "In an ER model, what is a group of similar entities sharing common properties known as?",
+    "expected_answer": "It is called an entity set. It contains entities belonging to the same type and having the same properties or attributes.",
+    "source_file": "001.pdf",
+    "page": 6,
+    "type": "definition",
+    "answerable": true
+  },
+  {
+    "id": 4,
+    "question": "How do data and information differ in terms of meaning and their usefulness when making decisions?",
+    "expected_answer": "Data consists of unorganized facts that may not have meaning on their own, whereas information is organized and interpreted data that provides context. Data alone is insufficient for decision-making, while information can support decisions.",
+    "source_file": "001.pdf",
+    "page": 1,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 5,
+    "question": "What is the difference between the physical and logical levels of database abstraction?",
+    "expected_answer": "The physical level explains how information is stored, including the underlying storage structures. The logical level describes what information the database contains and the relationships among it, without requiring users to understand the physical storage details.",
+    "source_file": "001.pdf",
+    "page": 3,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 6,
+    "question": "Why is a three-tier database application considered more secure than a setup where the client communicates with the database directly?",
+    "expected_answer": "In a three-tier architecture, the application server sits between the client and the database, preventing clients from accessing the database directly. This middle layer makes the system more secure.",
+    "source_file": "001.pdf",
+    "page": 5,
+    "type": "comparison",
+    "answerable": true
+  },
+  {
+    "id": 7,
+    "question": "How can a C/C++ or Java application communicate with a database and obtain the results of its commands?",
+    "expected_answer": "The application uses an API to send DDL or DML statements to the database and receive the results. ODBC is associated with C, while JDBC is used with Java.",
+    "source_file": "001.pdf",
+    "page": 4,
+    "type": "procedure",
+    "answerable": true
+  },
+  {
+    "id": 8,
+    "question": "How can a database designer merge entity types with shared properties to reduce repeated attributes?",
+    "expected_answer": "The designer identifies overlapping properties among entity types and creates a generalized entity set as their superclass. For example, Car, Jeep, and Bus can be generalized into Vehicle so their common attributes do not need to be repeated.",
+    "source_file": "001.pdf",
+    "page": 9,
+    "type": "procedure",
+    "answerable": true
+  }
+]

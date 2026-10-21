@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Uploaded PDFs (keep the folder, ignore the files)
+server/uploads/*
+!server/uploads/.gitkeep
+
+# Build output
+dist/
+build/
+client/dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Test and coverage output
+coverage/
+
+# Temporary files
+*.tmp
+tmp/
