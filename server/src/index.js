@@ -11,8 +11,7 @@ const pool = new Pool({
 
 app.get("/health", async (req, res) => {
     try {
-        const result = await client.query("SELECT 1");
-        console.log(result);
+        await client.query("SELECT 1");
         res.status(200).send({ ok: true, db: true });
     } catch (error) {
         res.status(500).send({ db: false });
