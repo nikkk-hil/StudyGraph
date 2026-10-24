@@ -14,3 +14,5 @@ const extractTextFromPDF = async (filePath) => {
         console.error('Error extracting PDF text:', error);
     }
 }
+
+export { extractTextFromPDF };
